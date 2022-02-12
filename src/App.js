@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Tasks from "./Components/C/Tasks";
+import Taco from "./Components/C/Taco";
+import Burrito from "./Components/C/Burrito";
+import Taquito from "./Components/C/Taquito";
+
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tasks />
+
+      <Routes>
+        <Route path="/" element={<Taco />} />
+        <Route path="/Burrito" element={<Burrito />} />
+        <Route path="/Taquito" element={<Taquito />} />
+      </Routes>
     </div>
   );
 }
